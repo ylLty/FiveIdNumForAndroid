@@ -2,5 +2,11 @@
   <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
   </style>
 
-  <style name="AppTheme" parent="Base.AppTheme" />
+  
+  <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- 状态栏背景颜色 (Android 5.0+) -->
+    <item name="android:statusBarColor">#212121</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="isLightTheme">false</item>
+  </style>
 </resources>

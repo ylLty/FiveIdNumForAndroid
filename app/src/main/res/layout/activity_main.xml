@@ -1,21 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#212121"
+    android:padding="16dp">
+
+    <!-- 标题 -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="五字神人检测器"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-        
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="32dp"
+        android:gravity="center" />
+
+    <!-- 文本输入框 -->
+    <EditText
+        android:id="@+id/idEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入昵称或真名"
+        android:textColorHint="#888888"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <!-- 卡片区域 -->
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    android:padding="16dp">
+
+    <!-- 尚未进行计算 -->
+        <TextView
+            android:id="@+id/resultsFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="尚未进行计算"               android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center" />
+
+    <!-- 结果百分比 -->
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N/A%"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- 开始计算按钮 -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始计算"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white" />
+
+    <!-- 底部版权信息 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright (C) 2026 yl_lty"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:gravity="center" />
+
+    <!-- 免责声明 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结果仅供娱乐，不具有任何参考价值，不代表任何人的观点"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

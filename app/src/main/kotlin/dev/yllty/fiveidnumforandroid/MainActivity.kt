@@ -3,6 +3,7 @@ package dev.yllty.fiveidnumforandroid
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import dev.yllty.fiveidnumforandroid.databinding.ActivityMainBinding
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        binding.textView.text = "Hello, Basic Activity!"
+        //binding.textView.text = "Hello, Basic Activity!"
+        Toast.makeText(this, "这是提示消息", Toast.LENGTH_SHORT).show()
     }
     
     override fun onDestroy() {
