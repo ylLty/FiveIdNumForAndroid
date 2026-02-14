@@ -8,5 +8,9 @@
     <item name="android:statusBarColor">#212121</item>
     <item name="android:windowLightStatusBar">false</item>
     <item name="isLightTheme">false</item>
+    
+    <item name="android:navigationBarColor">#212121</item>
+    
+    <item name="android:windowLightNavigationBar" tools:targetApi="26">false</item>
   </style>
 </resources>
